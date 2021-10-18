@@ -10,13 +10,13 @@ function App() {
       <Layout>
         <Switch>
           {routes.map((route) => (
-              <Route
-                key={route.path}
-                path={route.path}
-                component={route.component}
-                exact={route.exact}
-              />
-              ))}
+            <Route
+              key={route.path}
+              path={route.path}
+              component={route.component}
+              exact={route.exact}
+            />
+          ))}
         </Switch>
       </Layout>
     </BrowserRouter>

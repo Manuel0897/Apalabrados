@@ -4,11 +4,13 @@ import { Footer } from '../Footer';
 import './Layout.css'
 
 const Layout = ({ children }) => (
-    <main className="App">
+    <div className="App">
         <Header />
-        { children }
+            <main className="content">
+                { children }
+            </main>
         <Footer />
-    </main>
+    </div>
 )
 
 export default Layout;
