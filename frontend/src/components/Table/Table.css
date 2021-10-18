@@ -6,6 +6,10 @@ table {
     max-width: 998px;
     margin: 0 auto;
 }
+
+thead th {
+    border-bottom-width: 3px;
+}
   
 td, th {
     border: 1px solid #dddddd;

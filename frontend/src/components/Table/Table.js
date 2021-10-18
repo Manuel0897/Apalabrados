@@ -10,22 +10,26 @@ const Table = ({ content }) => {
 
     return (
         <table>
-            <tr>
-                {columns.map((column, i) => (
-                    <th key={`${column}-${i}`}>
-                        {column}
-                    </th>
-                ))}
-            </tr>
-            {content.map((row, i) => (
-                <tr key={`row-${i}`}>
-                    {columns.map((column, j) => (
-                        <td key={`${column}-item-${j}`}>
-                            {row[column]}
-                        </td>
+            <thead>
+                <tr>
+                    {columns.map((column, i) => (
+                        <th key={`${column}-${i}`}>
+                            {column}
+                        </th>
                     ))}
                 </tr>
-            ))}
+            </thead>
+            <tbody>
+                {content.map((row, i) => (
+                    <tr key={`row-${i}`}>
+                        {columns.map((column, j) => (
+                            <td key={`${column}-item-${j}`}>
+                                {row[column]}
+                            </td>
+                        ))}
+                    </tr>
+                ))}
+            </tbody>
         </table>
     )
 }
