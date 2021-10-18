@@ -67,3 +67,10 @@ Una vez este funcionando tu backend:
 3. Crea el archivo .env con tu configuración.
 4. Ejecuta el proyecto:
 	`yarn start`
+
+## Demo
+
+Mira la implementación:
+
+* Frontend: https://murmuring-anchorage-42572.herokuapp.com/
+* Backend: https://secure-savannah-58734.herokuapp.com/
