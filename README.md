@@ -53,28 +53,7 @@ El home cuenta con ciertas reglas para clasificar el imput:
 
 ### Diagrama de Flujo
 
-```flow
-st=>start: Inicio
-in=>operation: input
-op=>operation: getType
-condv=>condition: ¿Es valido?
-er=>operation: Error de tipo
-condn=>condition: ¿Es un Número?
-gn=>operation: Guardar Número
-condt=>condition: ¿Es un Texto?
-gt=>operation: Guardar Texto
-getc=>operation: Extrae el Caracter
-gc=>operation: Guardar Caracter
-e=>end: Fin
-
-st->in->op->condv
-condv(yes)->condn
-condv(no)->er->in
-condn(yes)->gn->e
-condn(no)->condt
-condt(yes)->gt->e
-condt(no)->getc->gc->e
-```
+![](https://i.imgur.com/NO2M6zh.png)
 
 ### Como usar
 
