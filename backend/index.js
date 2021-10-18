@@ -1,4 +1,5 @@
 const express = require('express');
+var cors = require('cors');
 const app = express();
 
 const { config } = require('./config/index');
@@ -6,6 +7,9 @@ const api = require('./routes/index.js');
 
 const { logErrors, wrapErrors, errorHandler  } = require('./utils/middleware/errorHandlers');
 const notFoundHandler = require('./utils/middleware/notFoundHandler');
+
+
+app.use(cors());
 
 // middleware de bodyparser
 app.use(express.json());
