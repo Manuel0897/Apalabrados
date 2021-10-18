@@ -50,6 +50,32 @@ El home cuenta con ciertas reglas para clasificar el imput:
 - Si es un texto, debe almacenar en la tabla texto. Guarda el input en la columna texto, el caracter inicial se guarda en la columna inicial y el caracter final se guarda en la columna final.
 - Si el input tiene algún caracter especial como tilde, coma, punto y coma, punto, numeral o parecidos, debe extraerlo del input y enviar el caracter a la tabla caracteres, columna caracter. El resto del input se descarta.
 
+
+### Diagrama de Flujo
+
+```flow
+st=>start: Inicio
+in=>operation: input
+op=>operation: getType
+condv=>condition: ¿Es valido?
+er=>operation: Error de tipo
+condn=>condition: ¿Es un Número?
+gn=>operation: Guardar Número
+condt=>condition: ¿Es un Texto?
+gt=>operation: Guardar Texto
+getc=>operation: Extrae el Caracter
+gc=>operation: Guardar Caracter
+e=>end: Fin
+
+st->in->op->condv
+condv(yes)->condn
+condv(no)->er->in
+condn(yes)->gn->e
+condn(no)->condt
+condt(yes)->gt->e
+condt(no)->getc->gc->e
+```
+
 ### Como usar
 
 Una vez este funcionando tu backend: 
