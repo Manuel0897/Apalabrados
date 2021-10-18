@@ -16,8 +16,6 @@ const Numbers = () => {
             .catch( console.log );
     }, []);
 
-    console.log(items)
-
     return (
         <div className="numbersPage">
             <h1>Numbers</h1>

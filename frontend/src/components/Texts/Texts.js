@@ -16,8 +16,6 @@ const Texts = () => {
             .catch( console.log );
     }, []);
 
-    console.log(items)
-
     return (
         <div className="textsPage">
             <h1>Texts</h1>

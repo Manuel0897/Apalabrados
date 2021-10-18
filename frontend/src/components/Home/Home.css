@@ -1,0 +1,26 @@
+.homePage form {
+    background-color: lightblue;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homePage form label {
+    display: flex;
+    flex-direction: column;
+}
+
+.homePage form label span {
+    margin-bottom: 0.5rem;
+}
+
+.homePage form .error {
+    font-size: 10px;
+    color: red;
+}
+
+.homePage form button {
+    margin-top: 1.5rem;
+}
